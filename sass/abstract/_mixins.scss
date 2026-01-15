@@ -1,0 +1,15 @@
+@use "./variables" as *;
+
+@mixin respond($device) {
+  @if $device == tablet {
+    @media (max-width: $bp-tablet-max) {
+      @content;
+    }
+  }
+
+  @if $device == mobile {
+    @media (max-width: $bp-mobile-max) {
+      @content;
+    }
+  }
+}

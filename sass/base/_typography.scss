@@ -1,0 +1,65 @@
+@use "../abstract/mixins" as *;
+
+.ag-display,
+h1,
+h2,
+h3 {
+  font-family: var(--ff-serif);
+}
+
+.ag-display {
+  font-size: clamp(var(--ag-min), 8vw, var(--ag-max));
+  line-height: var(--ag-lh-desktop);
+  letter-spacing: var(--ag-ls);
+
+  @include respond(tablet) {
+    line-height: var(--ag-lh-tablet);
+  }
+
+  @include respond(mobile) {
+    line-height: var(--ag-lh-mobile);
+  }
+}
+
+h1 {
+  font-size: clamp(var(--h1-min), 4vw, var(--h1-max));
+  line-height: var(--h1-lh-desktop);
+  letter-spacing: var(--h1-ls);
+
+  @include respond(tablet) {
+    line-height: var(--h1-lh-tablet);
+  }
+
+  @include respond(mobile) {
+    line-height: var(--h1-lh-mobile);
+  }
+}
+
+h2 {
+  font-size: var(--h2-desktop);
+  line-height: var(--h2-lh-desktop);
+  letter-spacing: var(--h2-ls);
+
+  @include respond(tablet) {
+    font-size: var(--h2-tablet);
+    line-height: var(--h2-lh-tablet);
+  }
+
+  @include respond(mobile) {
+    font-size: var(--h2-mobile);
+    line-height: var(--h2-lh-mobile);
+  }
+}
+
+h3 {
+  font-size: var(--h3-size);
+  line-height: var(--h3-lh);
+  letter-spacing: var(--h3-ls);
+}
+
+p {
+  font-family: var(--ff-sans);
+  font-size: clamp(var(--p-min), 1.5vw, var(--p-max));
+  line-height: var(--p-lh);
+  letter-spacing: var(--p-ls);
+}

@@ -1,0 +1,96 @@
+:root {
+  /* =========================
+     COLORS
+  ========================== */
+
+  // Text
+  --color-text-primary: #000;
+  --color-text-secondary: #fff;
+
+  // Background
+  --color-bg-main: #8e9c78;
+
+  // Accent
+  --color-accent-primary: #485c11;
+  --color-accent-secondary: #dfecc6;
+
+  // UI
+  --radius-xl: 30px;
+
+  /* =========================
+     FONT FAMILIES
+  ========================== */
+  --ff-serif: "Crimson Text", serif;
+  --ff-sans: "DM Sans", sans-serif;
+  --fs-sm: 0.875rem; // 14px-btn
+
+  /* =========================
+     AG DISPLAY
+  ========================== */
+  --ag-min: 4.75rem; //76px
+  //   --ag-mid: 8.75rem; //140px
+  --ag-max: 10rem; //160px
+  --ag-lh-desktop: 0.9;
+  --ag-lh-tablet: 0.8;
+  --ag-lh-mobile: 0.85;
+  --ag-ls: -0.045em;
+
+  /* =========================
+     H1
+  ========================== */
+  --h1-min: 3.125rem; //50px
+  --h1-max: 3.75rem; //60px
+  --h1-lh-desktop: 0.9;
+  --h1-lh-tablet: 0.9;
+  --h1-lh-mobile: 0.95;
+  --h1-ls: -0.03em;
+
+  /* =========================
+     H2
+  ========================== */
+  --h2-desktop: 2.5rem; //40px;
+  --h2-tablet: 2.5rem; //40px
+  --h2-mobile: 2rem; //32px;
+  --h2-lh-desktop: 1.5;
+  --h2-lh-tablet: 1.1;
+  --h2-lh-mobile: 1.1;
+  --h2-ls: -0.04em;
+
+  /* =========================
+     H3
+  ========================== */
+  --h3-size: 1.125rem; //18px
+  --h3-lh: 1;
+  --h3-ls: -0.03em;
+
+  /* =========================
+     PARAGRAPH
+  ========================== */
+  --p-min: 0.9375rem; /* 15px */
+  --p-max: 1rem;
+  --p-lh: 1.4;
+  --p-ls: -0.005em;
+
+  /* =========================
+     Spacing scale
+  ========================== */
+  --space-4: 0.25rem; /* 4px */
+  --space-8: 0.5rem; /* 8px */
+  --space-16: 1rem; /* 16px */
+  --space-24: 1.5rem; /* 24px */
+  --space-32: 2rem; /* 32px */
+  --space-48: 3rem; /* 48px */
+  --space-64: 4rem; /* 64px */
+
+  --section-space-y: clamp(6.25rem, 8vw, 7.5rem); //100px - 120px
+
+  --container-max-width: 75em; //1200px
+  --container-padding-x: clamp(1rem, 4vw, 2rem);
+}
+
+/* =========================
+     BREAKPOINTS
+  ========================== */
+
+$bp-tablet-max: 79.9375em; // 1279px
+$bp-mobile-max: 49.9375em; // 799px

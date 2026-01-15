@@ -1,0 +1,260 @@
+:root {
+  /* =========================
+     COLORS
+  ========================== */
+  --color-text-primary: #000;
+  --color-text-secondary: #fff;
+  --color-bg-main: #8e9c78;
+  --color-accent-primary: #485c11;
+  --color-accent-secondary: #dfecc6;
+  --radius-xl: 30px;
+  /* =========================
+     FONT FAMILIES
+  ========================== */
+  --ff-serif: "Crimson Text", serif;
+  --ff-sans: "DM Sans", sans-serif;
+  --fs-sm: 0.875rem;
+  /* =========================
+     AG DISPLAY
+  ========================== */
+  --ag-min: 4.75rem;
+  --ag-max: 10rem;
+  --ag-lh-desktop: 0.9;
+  --ag-lh-tablet: 0.8;
+  --ag-lh-mobile: 0.85;
+  --ag-ls: -0.045em;
+  /* =========================
+     H1
+  ========================== */
+  --h1-min: 3.125rem;
+  --h1-max: 3.75rem;
+  --h1-lh-desktop: 0.9;
+  --h1-lh-tablet: 0.9;
+  --h1-lh-mobile: 0.95;
+  --h1-ls: -0.03em;
+  /* =========================
+     H2
+  ========================== */
+  --h2-desktop: 2.5rem;
+  --h2-tablet: 2.5rem;
+  --h2-mobile: 2rem;
+  --h2-lh-desktop: 1.5;
+  --h2-lh-tablet: 1.1;
+  --h2-lh-mobile: 1.1;
+  --h2-ls: -0.04em;
+  /* =========================
+     H3
+  ========================== */
+  --h3-size: 1.125rem;
+  --h3-lh: 1;
+  --h3-ls: -0.03em;
+  /* =========================
+     PARAGRAPH
+  ========================== */
+  --p-min: 0.9375rem; /* 15px */
+  --p-max: 1rem;
+  --p-lh: 1.4;
+  --p-ls: -0.005em;
+  /* =========================
+     Spacing scale
+  ========================== */
+  --space-4: 0.25rem; /* 4px */
+  --space-8: 0.5rem; /* 8px */
+  --space-16: 1rem; /* 16px */
+  --space-24: 1.5rem; /* 24px */
+  --space-32: 2rem; /* 32px */
+  --space-48: 3rem; /* 48px */
+  --space-64: 4rem; /* 64px */
+  --section-space-y: clamp(6.25rem, 8vw, 7.5rem);
+  --container-max-width: 75em;
+  --container-padding-x: clamp(1rem, 4vw, 2rem);
+}
+
+/* =========================
+     BREAKPOINTS
+  ========================== */
+/* =====================================================
+   BASE STYLES
+   Global defaults & element normalization
+   ===================================================== */
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Body foundation */
+body {
+  margin: 0;
+  font-family: var(--ff-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+/* Media elements */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form elements */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Lists */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Focus styles (accessibility) */
+:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+.ag-display,
+h1,
+h2,
+h3 {
+  font-family: var(--ff-serif);
+}
+
+.ag-display {
+  font-size: clamp(var(--ag-min), 8vw, var(--ag-max));
+  line-height: var(--ag-lh-desktop);
+  letter-spacing: var(--ag-ls);
+}
+@media (max-width: 79.9375em) {
+  .ag-display {
+    line-height: var(--ag-lh-tablet);
+  }
+}
+@media (max-width: 49.9375em) {
+  .ag-display {
+    line-height: var(--ag-lh-mobile);
+  }
+}
+
+h1 {
+  font-size: clamp(var(--h1-min), 4vw, var(--h1-max));
+  line-height: var(--h1-lh-desktop);
+  letter-spacing: var(--h1-ls);
+}
+@media (max-width: 79.9375em) {
+  h1 {
+    line-height: var(--h1-lh-tablet);
+  }
+}
+@media (max-width: 49.9375em) {
+  h1 {
+    line-height: var(--h1-lh-mobile);
+  }
+}
+
+h2 {
+  font-size: var(--h2-desktop);
+  line-height: var(--h2-lh-desktop);
+  letter-spacing: var(--h2-ls);
+}
+@media (max-width: 79.9375em) {
+  h2 {
+    font-size: var(--h2-tablet);
+    line-height: var(--h2-lh-tablet);
+  }
+}
+@media (max-width: 49.9375em) {
+  h2 {
+    font-size: var(--h2-mobile);
+    line-height: var(--h2-lh-mobile);
+  }
+}
+
+h3 {
+  font-size: var(--h3-size);
+  line-height: var(--h3-lh);
+  letter-spacing: var(--h3-ls);
+}
+
+p {
+  font-family: var(--ff-sans);
+  font-size: clamp(var(--p-min), 1.5vw, var(--p-max));
+  line-height: var(--p-lh);
+  letter-spacing: var(--p-ls);
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  padding-inline: var(--container-padding-x);
+  margin-inline: auto;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-space-y);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-btn);
+  font-family: var(--ff-sans);
+  font-weight: bold;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+  padding: var(--space-16) var(--space-32);
+  border: none;
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn--dark {
+  color: var(--color-text-secondary);
+  background-color: var(--color-accent-primary);
+}
+.btn--dark:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-accent-secondary);
+}
+.btn--light {
+  color: var(--color-text-primary);
+  background-color: var(--color-accent-secondary);
+}
+.btn--light:hover {
+  color: var(--color-text-secondary);
+  background-color: var(--color-accent-primary);
+}
+
+/*# sourceMappingURL=style.css.map */

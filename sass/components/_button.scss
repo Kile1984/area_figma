@@ -1,0 +1,37 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--fs-btn);
+  font-family: var(--ff-sans);
+  font-weight: bold; //bold
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+
+  padding: var(--space-16) var(--space-32);
+  border: none;
+  border-radius: var(--radius-xl);
+
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &--dark {
+    color: var(--color-text-secondary);
+    background-color: var(--color-accent-primary);
+
+    &:hover {
+      color: var(--color-text-primary);
+      background-color: var(--color-accent-secondary);
+    }
+  }
+  &--light {
+    color: var(--color-text-primary);
+    background-color: var(--color-accent-secondary);
+
+    &:hover {
+      color: var(--color-text-secondary);
+      background-color: var(--color-accent-primary);
+    }
+  }
+}
