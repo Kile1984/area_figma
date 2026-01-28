@@ -1,0 +1,113 @@
+1. FIGMA I PIXEL-PERFECT
+❓ „Da li radiš pixel-perfect implementaciju iz Figme?“
+
+Odgovor:
+
+Pratim dizajn vrlo pažljivo, ali ne težim slepom pixel-perfectu. Fokus mi je na vizuelnoj doslednosti, pravilnim razmacima i responsive ponašanju, tako da aplikacija izgleda isto na svim uređajima.
+
+❓ „Zašto se ovo ne poklapa 100% sa Figmom?“
+
+Odgovor:
+
+Figma je statički dizajn alat. U browseru imamo realne fontove, scrollbar, različite širine ekrana i dinamičan sadržaj. Zato dizajn prilagođavam tako da funkcioniše u realnim uslovima, ali uz očuvanu vizuelnu hijerarhiju.
+
+❓ „Može li baš 1:1 kao u Figmi?“
+
+Odgovor:
+
+Može za statične ekrane, ali kod responsive layouta uvek ostavljam kontrolisanu fleksibilnost kako dizajn ne bi pucao između rezolucija.
+
+2. PRELOMNE TAČKE (BREAKPOINTS)
+❓ „Zašto nisi koristio iste breakpointe kao u Figmi?“
+
+Odgovor:
+
+Breakpointi u Figmi su vizuelne smernice. Ja breakpoint postavljam tamo gde layout realno počinje da gubi čitljivost ili stabilnost, a ne striktno na određenoj rezoluciji.
+
+❓ „Na kojim rezolucijama obično menjaš layout?“
+
+Odgovor:
+
+Ne počinjem od fiksnih brojeva. Testiram layout u browseru i breakpoint uvodim tek kada je to potrebno. Često desktop layout može da funkcioniše do oko 800px bez problema.
+
+❓ „Zašto nisi ranije prebacio u dve kolone?“
+
+Odgovor:
+
+Zato što je layout i dalje bio čitljiv i vizuelno balansiran. Izbegavam prerano lomljenje layouta ako za tim nema realne potrebe.
+
+❓ „Radiš li mobile-first ili desktop-first?“
+
+Odgovor:
+
+Mogu oba pristupa. Kod marketing stranica najčešće radim desktop-first sa responsive prilagođavanjem, u skladu sa dizajnom koji dobijem.
+
+3. RAZMACI I LAYOUT ODLUKE
+❓ „Zašto razmaci nisu svuda identični kao u Figmi?“
+
+Odgovor:
+
+Fiksne pixel vrednosti iz Figme prevodim u skalabilne jedinice gde ima smisla, posebno za vertikalni ritam, kako bi razmaci prirodno reagovali na promenu font-size-a i ekrana.
+
+❓ „Zašto si ovde koristio grid, a negde flex?“
+
+Odgovor:
+
+Grid koristim za dvodimenzionalne layoute gde su bitni redovi i kolone, a flex za jednodimenzionalne tokove kao što su navigacije ili footer linkovi.
+
+❓ „Zašto poslednji red logotipa nije poravnat kao u Figmi?“
+
+Odgovor:
+
+CSS Grid ima svoja pravila ponašanja. Prilagodio sam layout tako da izgleda pravilno i stabilno u browseru, umesto da forsiram statičan izgled koji bi se loše ponašao responsivno.
+
+4. TIPOGRAFIJA
+❓ „Zašto koristiš fluidne veličine fonta?“
+
+Odgovor:
+
+Fluidna tipografija poboljšava čitljivost na različitim ekranima i sprečava nagle skokove veličina na breakpointima.
+
+❓ „Zašto naslov nije tačno iste veličine kao u Figmi?“
+
+Odgovor:
+
+Minimalna i maksimalna veličina su iste kao u dizajnu, dok se srednje vrednosti prilagođavaju kako bi tekst uvek izgledao prirodno.
+
+5. HTML STRUKTURA I SEMANTIKA
+❓ „Zašto koristiš section, header i footer?“
+
+Odgovor:
+
+Koristim semantički HTML zbog bolje strukture, pristupačnosti i održavanja koda. To pomaže i SEO-u i screen readerima.
+
+❓ „Zašto neke sekcije imaju inner wrapper?“
+
+Odgovor:
+
+Inner wrapper koristim samo kada postoji konkretan razlog — border, background, dekoracija ili potreba za dodatnim layout kontekstom. Ne dodajem ga bez potrebe.
+
+6. OPŠTA FRONTEND PITANJA
+❓ „Da li se ovo može lako menjati kasnije?“
+
+Odgovor:
+
+Da. Layout je modularan, razmaci su sistematizovani i breakpointi su svedeni na minimum.
+
+❓ „Da li je ovo skalabilno za više stranica?“
+
+Odgovor:
+
+Da. Struktura i stilovi su organizovani tako da se lako proširuju bez refaktorisanja postojećeg koda.
+
+❓ „Šta ako se sadržaj promeni?“
+
+Odgovor:
+
+Layout je fleksibilan i prilagođen promenama dužine teksta ili broja elemenata, bez pucanja dizajna.
+
+7. JEDNA REČENICA KOJU TREBA DA ZAPAMTIŠ
+
+Ako zapamtiš samo ovo, dovoljno je:
+
+„Figmu koristim kao vizuelnu referencu, a browser kao krajnji izvor istine.“

@@ -1,0 +1,156 @@
+0️⃣ Pre nego što otvoriš editor (mentalni korak)
+
+☐ Otvori Figma
+☐ Identifikuj:
+
+fontove (sve porodice + weight)
+
+spacing sistem (4 / 8 / 16 / 24…)
+
+max-width sadržaja
+
+grid (kolone, gutter)
+
+boje (tokens, ne hex na pamet)
+
+❗ Ne pišeš kod dok ovo ne znaš
+
+1️⃣ Napravi folder strukturu (ODMAH)
+assets/
+├─ fonts/
+├─ images/
+├─ icons/
+
+scss/
+├─ abstract/
+│  ├─ _variables.scss
+│  ├─ _mixins.scss
+│
+├─ base/
+│  ├─ _fonts.scss
+│  ├─ _reset.scss
+│  ├─ _typography.scss
+│  ├─ _base.scss
+│
+├─ layout/
+│  ├─ _container.scss
+│  ├─ _header.scss
+│
+├─ pages/
+│  └─ _home.scss
+│
+├─ components/
+│  └─ _buttons.scss
+│
+└─ main.scss
+
+
+☐ Pre HTML-a
+
+2️⃣ Ubaci ASSETS (bez korišćenja još)
+
+☐ Fontove (woff2, samo potrebni weight-i)
+☐ Ikone (svg sprite ili inline plan)
+☐ Slike (raw export, bez optimizacije još)
+
+👉 NIŠTA se još ne koristi, samo je na mestu.
+
+3️⃣ Inicijalizuj FONTOVE (OBAVEZNO PRE BILO ČEGA)
+_fonts.scss
+
+☐ @font-face za sve fontove
+☐ font-display: swap
+☐ nema ttf, nema otf
+
+_variables.scss
+
+☐ font tokens:
+
+--ff-sans
+--ff-serif
+--ff-mono
+
+_base.scss
+
+☐
+
+body {
+  font-family: var(--ff-sans);
+}
+
+
+❗ Ako ovo preskočiš → sve posle je sumnjivo
+
+4️⃣ Reset + base (pre layouta)
+
+☐ CSS reset (margin, box-sizing)
+☐ Heading margin reset
+☐ Body defaults (color, bg, font-size)
+
+👉 Cilj: čista nula, bez browser iznenađenja
+
+5️⃣ Definiši SPACING SISTEM (tokens)
+
+U _variables.scss:
+
+--space-4
+--space-8
+--space-16
+--space-24
+--space-32
+--space-48
+--space-64
+
+
+☐ Ne koristiš px direktno posle ovoga
+☐ Sve ide preko tokena
+
+6️⃣ Definiši CONTAINER (pre layouta)
+.container {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: var(--space-24);
+}
+
+
+☐ Zaključaš širinu
+☐ Više je NE menjaš
+
+7️⃣ Typography scale (pre sekcija)
+
+☐ Body text
+☐ Display / H1 (ag-display)
+☐ Nav link
+☐ Button text
+
+Sve sa:
+
+font-family
+
+font-weight (NUMERIČKI)
+
+line-height
+
+letter-spacing
+
+👉 Ovo rešava 80% “ne izgleda kao Figma” problema
+
+8️⃣ Buttons (PRE headera!)
+
+☐ .btn
+☐ .btn--primary / --dark
+☐ padding, font, icon gap
+
+Zašto pre headera?
+➡ header zavisi od buttona
+
+9️⃣ Tek sada: HTML skeleton
+<body>
+  <header></header>
+  <main></main>
+  <footer></footer>
+</body>
+
+
+☐ Bez sadržaja
+☐ Samo struktura

@@ -1,0 +1,63 @@
+„Pratim dizajn vrlo pažljivo, ali ne težim slepom pixel-perfectu. Fokus mi je na vizuelnoj doslednosti, pravilnim razmacima i responsive ponašanju.“
+
+Sirina .containera
+- Pogledati sta dominira u "Hero",
+- Ako dominira veliki naslov onda 72em sirina 
+- Ako ima vise kolona, kartica, slika onda sirina ide na 75em.
+
+Matematicko ogranicavanje nalova "ch"
+- ch ≠ karakter
+- 1ch ≈ širina znaka “0”
+* U kombinaciji sa clamp() dobijas fluidni font i kontrolisan prelom.
+- clamp() kontrolise velicinu slova a ch duzinu reda
+
+Grid u Headeru
+- Ako imas navigaciju onda ides sa grid ne sa flex.
+- Navigacija bolje dise sa gridom. 
+- Ako nemas navigaciju, imas samo logo i cta onda moze flex.
+
+Pravila Header i Section
+- Semantika HTML
+- Vertikalni spacing ( padding-block )
+- Background/border/separator 
+- Nema display:grid, ne mesa sadrzaj i strukturu
+
+Pravila za  .container:
+- Ograničava širinu
+- Centrira sadržaj
+- Daje horizontalni padding
+❗ Nikad:
+- ne nosi background
+- ne radi layout
+- ne zna za grid
+
+Razmak izmedju sekcija
+- Makro sekcije (hero, major content) → clamp()
+- Support sekcije (trusted, logos, badges) → px
+
+Tip slike	alt
+- Dekorativna:	alt="" + aria-hidden="true"
+- Ilustrativna ali bitna:	alt= Kratak, funkcionalan
+- Ikonica sa značenjem:	Obavezno alt
+- Background image (CSS):	NEMA alt
+
+🧠 JEDINO PRAVILO (zapamti ovo)
+- Horizontalni razmaci = px
+- Vertikalni razmaci = rem
+
+Brzi cheat-sheet
+  RAZMAK	        JEDINICA
+- Između sekcija	rem
+- Između paragrafa	rem
+- Između kartica vertikalno	rem
+- Između grid kolona, kartica	px
+- Izmedju row-ova rem
+- Između ikonice i teksta	px
+- Border radius	px
+- Shadow offset	px
+
+SECTION SPACING (Y)      → rem
+COMPONENT INTERNAL GAP   → rem
+LAYOUT GRID GAP (X)      → px
+PADDING INLINE (layout) → px
+
