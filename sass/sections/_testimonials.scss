@@ -1,0 +1,64 @@
+.testimonials {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--column-gap);
+
+    @media only screen and (max-width: 50em) {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  &__left {
+    img {
+      @media only screen and (max-width: 50em) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__right {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+
+    @media (max-width: 50em) {
+      padding-left: 0;
+    }
+  }
+
+  &__quote {
+    h2 {
+      font-size: 40px;
+      line-height: 1;
+      margin-bottom: 3.125rem;
+
+      @media only screen and (max-width: 50em) {
+        margin-block: 2.5rem 3.125rem;
+      }
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: 50em) {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  &__name {
+    font-size: 15px;
+  }
+
+  &__role {
+    font-family: var(--ff-mono);
+    font-size: 12px;
+    color: var(--color-accent-primary);
+  }
+}

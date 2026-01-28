@@ -1,0 +1,14 @@
+.cta {
+  &__intro {
+    width: 100%;
+    max-width: 37.5rem;
+    margin-inline: auto;
+    text-align: center;
+
+    display: grid;
+    row-gap: 2.5rem;
+  }
+  & .btn {
+    width: 100%;
+  }
+}

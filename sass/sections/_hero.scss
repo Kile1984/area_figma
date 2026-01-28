@@ -1,0 +1,79 @@
+@use "../abstract/mixins" as *;
+
+.hero {
+  padding-top: var(--section-offset-top);
+
+  @media only screen and (max-width: 37.5em) {
+    padding-top: 2.5rem;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    row-gap: var(--hero-content-gap);
+  }
+
+  &__content {
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+
+  &__media {
+    grid-column: 1 / -1;
+    grid-row: 2;
+
+    display: grid;
+    place-items: center;
+
+    height: 32.8rem;
+    overflow: hidden;
+
+    @media only screen and (max-width: 63.75em) {
+      height: 28rem;
+    }
+
+    @media only screen and (max-width: 50em) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      max-width: 80%;
+
+      @media only screen and (max-width: 63.75em) {
+        max-width: 95%;
+      }
+    }
+
+    &-mobile {
+      display: none;
+
+      @media only screen and (max-width: 50em) {
+        display: block;
+      }
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: 0;
+    width: 22rem;
+    height: 22rem;
+    background-color: var(--color-bg-main);
+    border-radius: 2rem;
+    z-index: -1;
+  }
+
+  .hero__decor--left {
+    left: 0;
+  }
+
+  .hero__decor--right {
+    right: 0;
+  }
+}
