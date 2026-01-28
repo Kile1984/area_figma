@@ -6,6 +6,8 @@
   // Text
   --color-text-primary: #000;
   --color-text-secondary: #fff;
+  --color-dark-gray: #6f6f6f;
+  --color-silver: #929292;
 
   // Background
   --color-bg-main: #8e9c78;
@@ -20,9 +22,17 @@
   /* =========================
      FONT FAMILIES
   ========================== */
-  --ff-serif: "Crimson Text", serif;
-  --ff-sans: "DM Sans", sans-serif;
+  --ff-sans:
+    "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --ff-serif: "Crimson Text", Georgia, serif;
+  --ff-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --fs-base: 0.95rem; //15px
   --fs-sm: 0.875rem; // 14px-btn
+
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-medium: 500;
+  --fw-regular: 400;
 
   /* =========================
      AG DISPLAY
@@ -33,7 +43,7 @@
   --ag-lh-desktop: 0.9;
   --ag-lh-tablet: 0.8;
   --ag-lh-mobile: 0.85;
-  --ag-ls: -0.045em;
+  --ag-ls: -0.0425em;
 
   /* =========================
      H1
@@ -82,10 +92,16 @@
   --space-48: 3rem; /* 48px */
   --space-64: 4rem; /* 64px */
 
-  --section-space-y: clamp(6.25rem, 8vw, 7.5rem); //100px - 120px
+  --column-gap: 20px;
 
-  --container-max-width: 75em; //1200px
-  --container-padding-x: clamp(1rem, 4vw, 2rem);
+  --hero-content-gap: clamp(5rem, 7vw, 6.25rem);
+  --benefits-heading-gap: clamp(30px, 4vw, 50px);
+
+  --section-space-y: clamp(6.25rem, 8vw, 7.5rem); //100px - 120px
+  --section-offset-top: 5rem;
+
+  --container-max-width: 72em; //1152px
+  --container-padding-x: clamp(1rem, 4vw, 1.5rem);
 }
 
 /* =========================
