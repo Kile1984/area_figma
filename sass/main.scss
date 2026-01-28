@@ -1,6 +1,7 @@
 @use "./abstract/mixins" as *;
 @use "./abstract/variables" as *;
 
+@use "./base/fonts";
 @use "./base/base";
 @use "./base/typography";
 
@@ -8,7 +9,10 @@
 
 @use "layout/container";
 @use "layout/page";
+@use "./layout/header";
 
 @use "./components/button";
 
 @use "./pages/home";
+
+@use "./layout/footer";
