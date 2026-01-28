@@ -37,10 +37,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 /* Form elements */
 button,
 input,
@@ -56,6 +52,17 @@ ol {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 /* Focus styles (accessibility) */
